@@ -8,7 +8,7 @@ const initialState = {
     data: {},
 }
 
-export const singleBlogaAsync = createAsyncThunk('singleBlog/fetchSingleBlog', async (title) => {
+export const singleBlogAsync = createAsyncThunk('singleBlog/fetchSingleBlog', async (title) => {
     const response = getSingleBlog(title);
     return response;
 });
@@ -18,19 +18,19 @@ const singleBlogSlice = createSlice({
     initialState,
     extraReducers: (builder) => {
         builder
-            .addCase(singleBlogaAsync.fulfilled, (state, action) => {
+            .addCase(singleBlogAsync.fulfilled, (state, action) => {
                 state.isError = false,
                     state.isLoading = false,
                     state.isMassage = '',
                     state.data = action.payload
             })
-            .addCase(singleBlogaAsync.pending, (state, action) => {
+            .addCase(singleBlogAsync.pending, (state, action) => {
                 state.isError = false,
                     state.isLoading = true,
                     state.isMassage = '',
                     state.data = {}
             })
-            .addCase(singleBlogaAsync.rejected, (state, action) => {
+            .addCase(singleBlogAsync.rejected, (state, action) => {
                 state.isError = true,
                     state.isLoading = false,
                     state.isMassage = action.error.message,
