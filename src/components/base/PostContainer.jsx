@@ -14,7 +14,7 @@ const PostContainer = () => {
     if (isError) {
         return <div>{isMassage}</div>
     }
-    if (!isLoading) {
+    if (isLoading) {
         return <Spinner />
     }
     return (
