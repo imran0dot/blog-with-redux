@@ -4,7 +4,7 @@ import PostContainer from "../components/base/PostContainer";
 const Home = () => {
     return (
         <div className="wrapper">
-                <FIlterbar />
+            <FIlterbar />
             <PostContainer />
         </div>
     );
