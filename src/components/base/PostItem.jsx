@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const PostItem = ({ item }) => {
     const {
+        id,
         title,
         image,
         tags,
@@ -20,7 +23,7 @@ const PostItem = ({ item }) => {
                     <p className="lws-publishedDate">{createdAt}</p>
                     <p className="lws-likeCount"><i className="fa-regular fa-thumbs-up"></i>{likes}</p>
                 </div>
-                <a href="post.html" className="lws-postTitle">{title}</a>
+                <Link to={`/blog/${title.split(' ').join('-').toLowerCase()}`} className="lws-postTitle">{title}</Link>
                 <div className="lws-tags">
                     {tags?.map((tag, index) => <span key={index}>#{tag}</span>)}
                 </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/LWSBlog.svg'
 const Navber = () => {
     return (
@@ -6,9 +7,9 @@ const Navber = () => {
             <div className="navbar-container">
                 {/* <!-- logo --> */}
                 <div className="logo">
-                    <a href="index.html">
+                    <Link to='/'>
                         <img src={logo} alt="search" />
-                    </a>
+                    </Link>
                 </div>
                 {/* <!-- auth buttons , This will nonfunctional, just for nice looking --> */}
                 <div className="auth-buttons">
