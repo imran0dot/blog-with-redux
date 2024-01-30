@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import Navber from './components/shared/Navber'
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <div>
       <Navber />
+      <Outlet />
     </div>
   )
 }
