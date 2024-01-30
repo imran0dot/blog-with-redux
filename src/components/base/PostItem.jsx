@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 const PostItem = ({ item }) => {
     const {
-        id,
         title,
-        description,
         image,
         tags,
         likes,
